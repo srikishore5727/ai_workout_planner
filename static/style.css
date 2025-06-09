@@ -1,0 +1,237 @@
+/* static/style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light gray background */
+    color: #1c1e21; /* Facebook-like text color */
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dddfe2;
+    padding-bottom: 20px;
+}
+
+#logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #0b5f8e; /* MyFit Mantra Blue */
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+    color: #606770;
+}
+
+h2 {
+    color: #0b5f8e;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.form-group {
+    margin-bottom: 5px; /* Reduced margin as gap handles spacing */
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1; /* Make this item span all columns */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4b4f56;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #0b5f8e;
+    box-shadow: 0 0 0 2px rgba(11, 95, 142, 0.2);
+    outline: none;
+}
+
+.form-group small {
+    font-size: 0.85em;
+    color: #606770;
+    display: block;
+    margin-top: 4px;
+}
+
+button[type="submit"] {
+    display: flex; /* For aligning text and spinner */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #0b5f8e; /* MyFit Mantra Blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #084a6e; /* Darker blue on hover */
+}
+
+button[type="submit"]:disabled {
+    background-color: #a0c3d4; /* Lighter, disabled state */
+    cursor: not-allowed;
+}
+
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s ease-in-out infinite;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+.message-area {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.message-area.error {
+    background-color: #ffebe8;
+    color: #c92a2a;
+    border: 1px solid #e0b4b4;
+}
+#loadingMessage {
+    background-color: #e7f3ff;
+    color: #0b5f8e;
+    border: 1px solid #cce0f5;
+}
+
+
+#resultsArea {
+    margin-top: 30px;
+}
+#resultsArea h2 {
+    text-align: center;
+    border-bottom: 1px solid #dddfe2;
+    padding-bottom: 15px;
+}
+
+#aiModelUsed, #planNotes {
+    font-size: 0.9em;
+    color: #606770;
+    margin-top: 8px;
+    background-color: #f0f2f5;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+#planNotes {
+    font-style: italic;
+}
+
+
+#planOutputContainer {
+    margin-top: 15px;
+}
+
+.session-card {
+    background-color: #f7f8fa; /* Slightly off-white for cards */
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.session-card h3 {
+    color: #1d2129;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e9ebee;
+    padding-bottom: 8px;
+}
+.session-card h4 {
+    color: #4b4f56;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.session-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.session-card li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #e9ebee;
+    font-size: 14px;
+}
+.session-card li:last-child {
+    border-bottom: none;
+}
+.session-card li strong {
+    color: #050505;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    .container {
+        padding: 20px 15px;
+    }
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+}
