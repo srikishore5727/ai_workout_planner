@@ -1,11 +1,11 @@
 # MyFit Mantra AI - Workout Plan Generator
 
 ## Objective
-Design a mini AI engine using FastAPI and the OpenAI API to generate a 12-session progressive workout plan based on user input, fulfilling the MyFit Mantra AI Intern Assignment requirements and specifically addressing the feedback to include a genuine AI component.
+Design a mini AI engine using FastAPI and the Gemini API to generate a 12-session progressive workout plan based on user input, fulfilling the MyFit Mantra AI Intern Assignment requirements and specifically addressing the feedback to include a genuine AI component.
 
 ## AI Integration (Addressing Feedback)
 This project addresses the core feedback by moving beyond simple rule-based logic.
-The AI component is handled via the **OpenAI API (`gpt-3.5-turbo` or `gpt-4`)**.
+The AI component is handled via the **Gemini API (`gemini-1.5-flash-latest`)**.
 The AI is meaningfully used for:
 1.  **Interpretation**: Understanding the user's `goal`, `experience`, and constraints.
 2.  **Dynamic Selection**: Choosing suitable exercises from a pre-filtered list (filtered by Python logic for equipment/level).
@@ -25,7 +25,7 @@ Python/Pandas is used for loading, cleaning, and strictly pre-filtering the exer
 - [x] Generates a 12-day progressive workout plan (3 sessions/week, 4 weeks).
 - [x] Each workout contains 3 sections: Warm-Up, Main Exercises, Cool-Down.
 - [x] Uses data from the provided CSV.
-- [x] **AI Component**: Integration of third-party AI service (OpenAI API).
+- [x] **AI Component**: Integration of third-party AI service (Gemini API).
 - [x] Bonus: Generate progressive overload (via AI Prompt).
 - [x] Bonus: Add logic to alternate between push/pull/legs days (via AI Prompt).
 - [x] Bonus: Export workout plan to JSON (API default response).
@@ -54,7 +54,7 @@ Python/Pandas is used for loading, cleaning, and strictly pre-filtering the exer
       ```
 5.  **API Key**: Create the `.env` file in the root and add your key:
       ```bash
-       OPENAI_API_KEY=sk-proj-YOUR_ACTUAL_KEY_HERE
+       GEMINI_API_KEY=sk-proj-YOUR_ACTUAL_KEY_HERE
       ```
 6.  **Run Server**:
      ```bash
